@@ -1,0 +1,36 @@
+@import "./cssModules/variables";
+@import "./cssModules/contactWindow";
+@import "./cssModules/chatWindow";
+@import "./cssModules/scrollBar";
+
+
+.body {
+  background-color: $basePage-color;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-photo/texture-background_1404-99.jpg?size=338&ext=jpg");
+
+}
+
+
+
+.MainContainer {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  height:100%;
+}
+
+@media only screen and (max-width: 650px) {
+  .MainContainer {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .body {
+    overflow-y:scroll;
+
+  }
+}

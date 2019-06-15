@@ -1,0 +1,120 @@
+
+
+@mixin allocateMessages(){
+  &:nth-child(even) {
+    @content
+  }
+}
+
+
+.MassageWindowContainer {
+  width: 100%;
+  background-color: $chat-background;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  height: 800px;
+
+  input {
+    height:78px;
+    width: 100%;
+    padding:20px;
+    border-radius: 10px;
+  }
+
+  .submitForm {
+    display: flex;
+    flex-direction: row;
+
+    button {
+      border-radius: 10px;
+      margin-left: 10px;
+    }
+  }
+
+}
+.MassageWindowContainer > * {
+  padding: 10px;
+  flex: 1;
+}
+
+.ChatContainer {
+  flex:8;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: scroll;
+  justify-content: space-between;
+
+
+  div {
+
+    border-radius: 25px;
+    background: $odd-msg-bgr;
+    padding: 20px;
+    width: 140px;
+    margin-bottom: 20px;
+
+    text-align: center;
+    @include allocateMessages(){
+      background: $evenMessageBgr;
+      margin-left: auto;
+      margin-right: 5px;
+    }
+
+    p {
+      margin:0;
+    }
+
+    .messageTime {
+      width:80px;
+      font-size: 12px;
+      color: $last-msg-font;
+      opacity: 0.8;
+      margin-bottom: -15px;
+      margin-left: auto;
+      margin-right: -30px;
+    }
+  }
+}
+
+.chatHeader {
+
+  max-height:60px;
+  text-align: center;
+  border-top: 1px solid $header-borders;
+  border-bottom: 1px solid $header-borders;
+  background: $chat-header-bgr;
+  border-radius: 5px;
+
+  .lastTimeOnline {
+    font-size: 14px;
+    color: #595454;
+    opacity: 0.8;
+  }
+
+  p {
+    margin:0;
+  }
+  :first-child {
+    font-family: Helvetica;
+    font-weight: bold;
+
+  }
+}
+
+.chatInput {
+  height:100px;
+  border-top: 1px solid $header-borders;
+  border-bottom: 1px solid $header-borders;
+
+  i {
+    margin-top: 19px;
+  }
+}
+
+
+.massage:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px blue;
+}

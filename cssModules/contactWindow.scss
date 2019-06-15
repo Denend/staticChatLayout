@@ -1,0 +1,82 @@
+.ContactsContainer {
+  width:500px;
+  height:800px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  min-width: 300px;
+}
+
+.contact {
+  border-bottom: 1px solid $contact-border-color;
+  background-color: $contact-color;
+  padding: 20px 30px;
+  min-height: 83px;
+  padding-bottom: 5px;
+
+  p {
+    margin:0;
+  }
+
+  .userName {
+    font-family: Courier;
+    font-weight: 600;
+  }
+
+  .lastMessageTime {
+    width:80px;
+    font-size: 12px;
+    color: $last-msg-font;
+    opacity: 0.8;
+    margin-bottom: -15px;
+    margin-left: auto;
+    margin-right: -30px;
+  }
+
+  .lastMessage {
+    font-size: 14px;
+    color: $last-msg-font;
+  }
+
+  .activityMark {
+    margin-top: -15px;
+    font-family: Helvetica;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    i {
+      margin-top: 1px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.contactsHeader {
+  font-family: Helvetica;
+  background:$chat-header-bgr;
+  max-height: 25px;
+  text-align: center;
+  border-top: 1px solid $header-borders;
+  border-bottom: 1px solid $header-borders;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.contact:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+}
+
+.contact:active {
+  filter: brightness(100%);
+  background-color: $evenMessageBgr;
+}
+
+
+@media only screen and (max-width: 650px) {
+  .ContactsContainer {
+    width:100%;
+  }
+}

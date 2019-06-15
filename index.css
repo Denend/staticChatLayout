@@ -1,0 +1,178 @@
+.ContactsContainer {
+  width: 500px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  min-width: 300px; }
+
+.contact {
+  border-bottom: 1px solid #E1E8EE;
+  background-color: #badc58;
+  padding: 20px 30px;
+  min-height: 83px;
+  padding-bottom: 5px; }
+  .contact p {
+    margin: 0; }
+  .contact .userName {
+    font-family: Courier;
+    font-weight: 600; }
+  .contact .lastMessageTime {
+    width: 80px;
+    font-size: 12px;
+    color: #595454;
+    opacity: 0.8;
+    margin-bottom: -15px;
+    margin-left: auto;
+    margin-right: -30px; }
+  .contact .lastMessage {
+    font-size: 14px;
+    color: #595454; }
+  .contact .activityMark {
+    margin-top: -15px;
+    font-family: Helvetica; }
+  .contact div {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px; }
+    .contact div i {
+      margin-top: 1px;
+      margin-left: 10px; }
+
+.contactsHeader {
+  font-family: Helvetica;
+  background: #D2C29D;
+  max-height: 25px;
+  text-align: center;
+  border-top: 1px solid #577284;
+  border-bottom: 1px solid #577284;
+  border-radius: 5px;
+  font-weight: bold; }
+
+.contact:hover {
+  filter: brightness(70%);
+  cursor: pointer; }
+
+.contact:active {
+  filter: brightness(100%);
+  background-color: #ECDB54; }
+
+@media only screen and (max-width: 650px) {
+  .ContactsContainer {
+    width: 100%; } }
+.MassageWindowContainer {
+  width: 100%;
+  background-color: #F0EAD6;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  height: 800px; }
+  .MassageWindowContainer input {
+    height: 78px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px; }
+  .MassageWindowContainer .submitForm {
+    display: flex;
+    flex-direction: row; }
+    .MassageWindowContainer .submitForm button {
+      border-radius: 10px;
+      margin-left: 10px; }
+
+.MassageWindowContainer > * {
+  padding: 10px;
+  flex: 1; }
+
+.ChatContainer {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: scroll;
+  justify-content: space-between; }
+  .ChatContainer div {
+    border-radius: 25px;
+    background: #badc58;
+    padding: 20px;
+    width: 140px;
+    margin-bottom: 20px;
+    text-align: center; }
+    .ChatContainer div:nth-child(even) {
+      background: #ECDB54;
+      margin-left: auto;
+      margin-right: 5px; }
+    .ChatContainer div p {
+      margin: 0; }
+    .ChatContainer div .messageTime {
+      width: 80px;
+      font-size: 12px;
+      color: #595454;
+      opacity: 0.8;
+      margin-bottom: -15px;
+      margin-left: auto;
+      margin-right: -30px; }
+
+.chatHeader {
+  max-height: 60px;
+  text-align: center;
+  border-top: 1px solid #577284;
+  border-bottom: 1px solid #577284;
+  background: #D2C29D;
+  border-radius: 5px; }
+  .chatHeader .lastTimeOnline {
+    font-size: 14px;
+    color: #595454;
+    opacity: 0.8; }
+  .chatHeader p {
+    margin: 0; }
+  .chatHeader :first-child {
+    font-family: Helvetica;
+    font-weight: bold; }
+
+.chatInput {
+  height: 100px;
+  border-top: 1px solid #577284;
+  border-bottom: 1px solid #577284; }
+  .chatInput i {
+    margin-top: 19px; }
+
+.massage:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px blue; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; }
+
+.body {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-photo/texture-background_1404-99.jpg?size=338&ext=jpg"); }
+
+.MainContainer {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+
+@media only screen and (max-width: 650px) {
+  .MainContainer {
+    display: flex;
+    flex-direction: column; }
+
+  .body {
+    overflow-y: scroll; } }
+
+/*# sourceMappingURL=index.css.map */
